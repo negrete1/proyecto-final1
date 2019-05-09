@@ -86,7 +86,7 @@ CFiguras miobj;
 CModel kit;
 CModel llanta;
 
-//Animación del coche
+//AnimaciÃ³n del coche
 float movKit = 0.0;
 bool g_fanimacion = false;
 
@@ -345,7 +345,7 @@ void display ( void )   // Creamos la funcion donde se dibuja
 			
 				glTranslatef(0.5, 3, -6);
 				
-				//Pongo aquí la carroceria del carro
+				//Pongo aquÃ­ la carroceria del carro
 
 				kit.GLrender(NULL,_SHADED,1.0);  //_WIRED O _POINTS
 				
@@ -1069,7 +1069,7 @@ void display ( void )   // Creamos la funcion donde se dibuja
 			glEnable(GL_LIGHTING);
 			glPopMatrix();
 
-			//////////////////////////DvD´s///////////////////////////////
+			//////////////////////////DvDÂ´s///////////////////////////////
 
 			glPushMatrix();
 			glTranslatef(0.79, 1.2, -9.5);
@@ -1831,8 +1831,8 @@ void display ( void )   // Creamos la funcion donde se dibuja
 	glDisable(GL_TEXTURE_2D);
 	glDisable(GL_LIGHTING);
 		glColor3f(1.0,0.0,0.0);
-		pintaTexto(-12,12.0,-14.0,(void *)font,"Practica 10");
-		pintaTexto(-12,10.5,-14,(void *)font,"Poner algo en Movimiento");
+		pintaTexto(-12,12.0,-14.0,(void *)font,"Proyecto Final");
+		pintaTexto(-12,10.5,-14,(void *)font,"Recreacion de un cuarto");
 		glColor3f(1.0,1.0,1.0);
 	glEnable(GL_LIGHTING);
 	glEnable(GL_TEXTURE_2D);
@@ -1903,7 +1903,7 @@ void keyboard ( unsigned char key, int x, int y )  // Create Keyboard Function
 			break;
 
 		case ' ':		//Poner algo en movimiento
-			g_fanimacion^= true; //Activamos/desactivamos la animacíon
+			g_fanimacion^= true; //Activamos/desactivamos la animacÃ­on
 			break;
 
 		case 27:        // Cuando Esc es presionado...
@@ -1954,14 +1954,14 @@ int main ( int argc, char** argv )   // Main Function
 {
   glutInit            (&argc, argv); // Inicializamos OpenGL
   glutInitDisplayMode (GLUT_RGB | GLUT_DOUBLE | GLUT_DEPTH); // Display Mode (Clores RGB y alpha | Buffer Doble )
-  glutInitWindowSize  (500, 500);	// Tamaño de la Ventana
+  glutInitWindowSize  (500, 500);	// TamaÃ±o de la Ventana
   glutInitWindowPosition (0, 0);	//Posicion de la Ventana
   glutCreateWindow    ("Practica 10"); // Nombre de la Ventana
   //glutFullScreen     ( );         // Full Screen
   InitGL ();						// Parametros iniciales de la aplicacion
-  glutDisplayFunc     ( display );  //Indicamos a Glut función de dibujo
-  glutReshapeFunc     ( reshape );	//Indicamos a Glut función en caso de cambio de tamano
-  glutKeyboardFunc    ( keyboard );	//Indicamos a Glut función de manejo de teclado
+  glutDisplayFunc     ( display );  //Indicamos a Glut funciÃ³n de dibujo
+  glutReshapeFunc     ( reshape );	//Indicamos a Glut funciÃ³n en caso de cambio de tamano
+  glutKeyboardFunc    ( keyboard );	//Indicamos a Glut funciÃ³n de manejo de teclado
   glutSpecialFunc     ( arrow_keys );	//Otras
   glutIdleFunc		  ( animacion );
   glutMainLoop        ( );          // 
